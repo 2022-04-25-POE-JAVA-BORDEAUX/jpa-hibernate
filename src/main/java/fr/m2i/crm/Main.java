@@ -1,7 +1,5 @@
 package fr.m2i.crm;
 
-import fr.m2i.crm.dao.CustomerDAO;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -20,8 +18,5 @@ public class Main {
 //            entityManager.close();
 //            emf.close();
 //        }
-
-        CustomerDAO customerDAO = new CustomerDAO();
-        System.out.println(customerDAO.findById(1).getCompanyName());
     }
 }
