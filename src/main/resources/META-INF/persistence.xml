@@ -5,7 +5,6 @@
              version="2.2">
     <persistence-unit name="crm">
         <class>fr.m2i.crm.model.Customer</class>
-        <class>fr.m2i.crm.model.Order</class>
         <properties>
             <!-- database connection -->
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
