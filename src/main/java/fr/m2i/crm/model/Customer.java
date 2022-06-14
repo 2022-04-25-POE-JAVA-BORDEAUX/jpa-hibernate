@@ -1,5 +1,8 @@
 package fr.m2i.crm.model;
 
+import fr.m2i.crm.state.CustomerState;
+import org.hibernate.annotations.ColumnDefault;
+
 import javax.persistence.*;
 
 @Entity
@@ -36,6 +39,10 @@ public class Customer {
 
     @Column(name = "zip_code", length = 12)
     private String zipCode;
+
+    @Column(name = "state", columnDefinition = "INT(1) DEFAULT 0 NOT NULL")
+    @Enumerated(EnumType.ORDINAL)
+    public CustomerState customerState;
 
     public Long getId() {
         return id;

@@ -8,7 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
         EntityManager entityManager = SessionHelper.getEntityManager();
-        // some action with jpa
+        // some action with jpa with DAO
+
         entityManager.close();
     }
 }
