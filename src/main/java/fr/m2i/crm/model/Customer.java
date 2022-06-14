@@ -1,7 +1,6 @@
 package fr.m2i.crm.model;
 
 import fr.m2i.crm.state.CustomerState;
-import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 
@@ -122,5 +121,34 @@ public class Customer {
 
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
+    }
+
+    public CustomerState getCustomerState() {
+        return customerState;
+    }
+
+    public void setCustomerState(CustomerState customerState) {
+        this.customerState = customerState;
+    }
+
+    public void setNotNullData(Customer newCustomer) {
+        if (newCustomer.getAddress() != null) {
+            this.setAddress(newCustomer.getAddress());
+        }
+
+        if (newCustomer.getCompanyName() != null) {
+            this.setCompanyName(newCustomer.getCompanyName());
+        }
+
+        if (newCustomer.getCity() != null) {
+            this.setCity(newCustomer.getCity());
+        }
+
+        if (newCustomer.getZipCode() != null) {
+            this.setZipCode(newCustomer.getZipCode());
+        }
+
+        // l'avoir pour tous les champs qu'on veut modifier
+
     }
 }
