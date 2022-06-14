@@ -2,12 +2,8 @@ package fr.m2i.crm;
 
 import fr.m2i.crm.dao.CustomerDAO;
 import fr.m2i.crm.helper.SessionHelper;
-import fr.m2i.crm.model.Customer;
-import fr.m2i.crm.model.Order;
-import fr.m2i.crm.state.CustomerState;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.EntityManager;
 
 public class Main {
 
@@ -24,7 +20,7 @@ public class Main {
 //            for (Order order : customer.getOrderList()) {
 //                System.out.println("order designation:" + order.getDesignation());
 //            }
-        }
+//        }
 
 //        Customer customer = customerDAO.findById(2L);
 //
