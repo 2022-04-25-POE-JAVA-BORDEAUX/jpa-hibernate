@@ -3,6 +3,7 @@ package fr.m2i.crm.model;
 import fr.m2i.crm.state.CustomerState;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "customers")
@@ -42,6 +43,9 @@ public class Customer {
     @Column(name = "state", columnDefinition = "INT(1) DEFAULT 0 NOT NULL")
     @Enumerated(EnumType.ORDINAL)
     public CustomerState customerState;
+
+    @OneToMany(mappedBy = "customer")
+    private List<Order> orderList;
 
     public Long getId() {
         return id;
@@ -129,6 +133,14 @@ public class Customer {
 
     public void setCustomerState(CustomerState customerState) {
         this.customerState = customerState;
+    }
+
+    public List<Order> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<Order> orderList) {
+        this.orderList = orderList;
     }
 
     public void setNotNullData(Customer newCustomer) {

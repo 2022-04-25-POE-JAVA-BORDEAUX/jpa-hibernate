@@ -3,6 +3,7 @@ package fr.m2i.crm;
 import fr.m2i.crm.dao.CustomerDAO;
 import fr.m2i.crm.helper.SessionHelper;
 import fr.m2i.crm.model.Customer;
+import fr.m2i.crm.model.Order;
 import fr.m2i.crm.state.CustomerState;
 
 import javax.persistence.*;
@@ -15,10 +16,14 @@ public class Main {
         // some action with jpa with DAO
         CustomerDAO customerDAO = new CustomerDAO();
 
-        List<Customer> customerList = customerDAO.findAll();
-
-        for (Customer customer : customerList) {
-            System.out.println("company_name: " + customer.getCompanyName());
+//        List<Customer> customerList = customerDAO.findAll();
+//
+//        for (Customer customer : customerList) {
+//            System.out.println("company_name: " + customer.getCompanyName());
+//
+//            for (Order order : customer.getOrderList()) {
+//                System.out.println("order designation:" + order.getDesignation());
+//            }
         }
 
 //        Customer customer = customerDAO.findById(2L);
