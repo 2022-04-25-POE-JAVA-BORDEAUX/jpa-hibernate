@@ -2,12 +2,19 @@ package fr.m2i.crm.dao;
 
 import fr.m2i.crm.helper.SessionHelper;
 import fr.m2i.crm.model.Customer;
-import fr.m2i.crm.state.CustomerState;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
+import java.util.List;
 
 public class CustomerDAO {
+
+    public List<Customer> findAll(){
+        EntityManager entityManager = SessionHelper.getEntityManager();
+        Query findAllQuery = entityManager.createQuery("select c from Customer c");
+        return findAllQuery.getResultList();
+    }
 
     public Customer findById(Long id) {
         EntityManager entityManager = SessionHelper.getEntityManager();

@@ -6,6 +6,7 @@ import fr.m2i.crm.model.Customer;
 import fr.m2i.crm.state.CustomerState;
 
 import javax.persistence.*;
+import java.util.List;
 
 public class Main {
 
@@ -14,7 +15,13 @@ public class Main {
         // some action with jpa with DAO
         CustomerDAO customerDAO = new CustomerDAO();
 
-//        Customer customer = customerDAO.findById(124L);
+        List<Customer> customerList = customerDAO.findAll();
+
+        for (Customer customer : customerList) {
+            System.out.println("company_name: " + customer.getCompanyName());
+        }
+
+//        Customer customer = customerDAO.findById(2L);
 //
 //        if (customer != null) {
 //            System.out.println("company_name: " + customer.getCompanyName());
