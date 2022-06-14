@@ -13,12 +13,35 @@ public class Main {
         EntityManager entityManager = SessionHelper.getEntityManager();
         // some action with jpa with DAO
         CustomerDAO customerDAO = new CustomerDAO();
-//        customerDAO.create();
 
-        Customer customerData = new Customer();
-        customerData.setZipCode("75001");
+//        Customer customer = customerDAO.findById(124L);
+//
+//        if (customer != null) {
+//            System.out.println("company_name: " + customer.getCompanyName());
+//        }
 
-        customerDAO.update(2L, customerData);
+//        Customer newCustomer = new Customer();
+//        newCustomer.setAddress("1 rue de la paix");
+//        newCustomer.setCity("Paris");
+//        newCustomer.setCompanyName("Le nom de mon entreprise");
+//        newCustomer.setCountry("France");
+//        newCustomer.setCustomerState(CustomerState.INACTIVE);
+//        newCustomer.setEmail("new-customer@email.com");
+//        newCustomer.setFirstname("New");
+//        newCustomer.setLastname("Customer");
+//        newCustomer.setPhone("0612121212");
+//        newCustomer.setZipCode("75001");
+//
+//        customerDAO.create(newCustomer);
+//
+//        Customer otherCustomer = null;
+//        customerDAO.create(otherCustomer);
+
+//        Customer customerData = new Customer();
+//        customerData.setCompanyName("Mon nouveau nom d'entreprise");
+//
+//        // Attention sur l'id qu'on envoi ici
+//        customerDAO.update(3L, customerData);
 
         entityManager.close();
     }

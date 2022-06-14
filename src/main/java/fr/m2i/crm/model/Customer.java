@@ -136,19 +136,40 @@ public class Customer {
             this.setAddress(newCustomer.getAddress());
         }
 
+        if (newCustomer.getCity() != null) {
+            this.setCity(newCustomer.getCity());
+        }
+
         if (newCustomer.getCompanyName() != null) {
             this.setCompanyName(newCustomer.getCompanyName());
         }
 
-        if (newCustomer.getCity() != null) {
-            this.setCity(newCustomer.getCity());
+        if (newCustomer.getCountry() != null) {
+            this.setCountry(newCustomer.getCountry());
+        }
+
+        if (newCustomer.getCustomerState() != null) {
+            this.setCustomerState(newCustomer.getCustomerState());
+        }
+
+        if (newCustomer.getEmail() != null) {
+            this.setEmail(newCustomer.getEmail());
+        }
+
+        if (newCustomer.getFirstname() != null) {
+            this.setFirstname(newCustomer.getFirstname());
+        }
+
+        if (newCustomer.getLastname() != null) {
+            this.setLastname(newCustomer.getLastname());
+        }
+
+        if (newCustomer.getPhone() != null) {
+            this.setPhone(newCustomer.getPhone());
         }
 
         if (newCustomer.getZipCode() != null) {
             this.setZipCode(newCustomer.getZipCode());
         }
-
-        // l'avoir pour tous les champs qu'on veut modifier
-
     }
 }
